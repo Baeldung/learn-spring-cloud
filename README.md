@@ -1,3 +1,3 @@
-# Learn Spring Cloud - Introduction to Cloud-Native Architectures
+# Learn Spring Cloud - Centralized Configuration Management
 
-This is the codebase for Module "Introduction to Cloud-Native Architectures" of Learn Spring Cloud.
+This is the codebase for Module "Centralized Configuration Management" of Learn Spring Cloud.

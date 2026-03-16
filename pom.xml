@@ -3,16 +3,18 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>The 'Learn Spring Cloud' Course: Introduction to Cloud-Native Architectures</description>
-    <name>introduction-to-cloud-native-architectures</name>
+    <description>The 'Learn Spring Cloud' Course: Centralized Configuration Management</description>
+    <name>centralized-configuration-management</name>
 
     <groupId>com.baeldung</groupId>
-    <artifactId>lsc-introduction-to-cloud-native-architectures</artifactId>
+    <artifactId>lsc-centralized-configuration-management</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>project-setup-start</module>
-        <module>project-setup-end</module>
+        <module>config-server-start</module>
+        <module>config-server-end</module>
+        <module>config-server-clients-start</module>
+        <module>config-server-clients-end</module>
     </modules>
 </project>
