@@ -3,18 +3,18 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>The 'Learn Spring Cloud' Course: Centralized Configuration Management</description>
-    <name>centralized-configuration-management</name>
+    <description>The 'Learn Spring Cloud' Course: Service Discovery and Registration</description>
+    <name>service-discovery-and-registration</name>
 
     <groupId>com.baeldung</groupId>
-    <artifactId>lsc-centralized-configuration-management</artifactId>
+    <artifactId>lsc-service-discovery-and-registration</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>config-server-start</module>
-        <module>config-server-end</module>
-        <module>config-server-clients-start</module>
-        <module>config-server-clients-end</module>
+        <module>discovery-server-start</module>
+        <module>discovery-server-end</module>
+        <module>eureka-clients-start</module>
+        <module>eureka-clients-end</module>
     </modules>
 </project>
