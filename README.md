@@ -1,3 +1,3 @@
-# Learn Spring Cloud - Testing Microservices Integration
+# Learn Spring Cloud - Spring Cloud on Kubernetes
 
-This is the codebase for Module "Testing Microservices Integration" of Learn Spring Cloud.
+This is the codebase for Module "Spring Cloud on Kubernetes" of Learn Spring Cloud.

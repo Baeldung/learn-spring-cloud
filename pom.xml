@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>The 'Learn Spring Cloud' Course: Testing Microservices Integration</description>
-    <name>testing-microservices-integration</name>
+    <description>The 'Learn Spring Cloud' Course: Spring Cloud on Kubernetes</description>
+    <name>spring-cloud-on-kubernetes</name>
 
     <groupId>com.baeldung</groupId>
-    <artifactId>lsc-testing-microservices-integration</artifactId>
+    <artifactId>lsc-spring-cloud-on-kubernetes</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
