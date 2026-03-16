@@ -1,3 +1,3 @@
-# Learn Spring Cloud - Distributed Observability and Tracing
+# Learn Spring Cloud - Event-Driven Architecture
 
-This is the codebase for Module "Distributed Observability and Tracing" of Learn Spring Cloud.
+This is the codebase for Module "Event-Driven Architecture" of Learn Spring Cloud.
