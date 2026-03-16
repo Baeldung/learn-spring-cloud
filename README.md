@@ -1,3 +1,3 @@
-# Learn Spring Cloud - Event-Driven Architecture
+# Learn Spring Cloud - Testing Microservices Integration
 
-This is the codebase for Module "Event-Driven Architecture" of Learn Spring Cloud.
+This is the codebase for Module "Testing Microservices Integration" of Learn Spring Cloud.
