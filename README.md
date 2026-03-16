@@ -1,3 +1,3 @@
-# Learn Spring Cloud - API Gateways
+# Learn Spring Cloud - Distributed Observability and Tracing
 
-This is the codebase for Module "API Gateways" of Learn Spring Cloud.
+This is the codebase for Module "Distributed Observability and Tracing" of Learn Spring Cloud.
