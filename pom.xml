@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>The 'Learn Spring Cloud' Course: Resilient Inter-Service Communication</description>
-    <name>resilient-inter-service-communication</name>
+    <description>The 'Learn Spring Cloud' Course: API Gateways</description>
+    <name>api-gateways</name>
 
     <groupId>com.baeldung</groupId>
-    <artifactId>lsc-resilient-inter-service-communication</artifactId>
+    <artifactId>lsc-api-gateways</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 

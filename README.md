@@ -1,3 +1,3 @@
-# Learn Spring Cloud - Resilient Inter-Service Communication
+# Learn Spring Cloud - API Gateways
 
-This is the codebase for Module "Resilient Inter-Service Communication" of Learn Spring Cloud.
+This is the codebase for Module "API Gateways" of Learn Spring Cloud.
