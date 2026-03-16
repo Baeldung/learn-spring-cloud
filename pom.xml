@@ -3,18 +3,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>The 'Learn Spring Cloud' Course: Service Discovery and Registration</description>
-    <name>service-discovery-and-registration</name>
+    <description>The 'Learn Spring Cloud' Course: Resilient Inter-Service Communication</description>
+    <name>resilient-inter-service-communication</name>
 
     <groupId>com.baeldung</groupId>
-    <artifactId>lsc-service-discovery-and-registration</artifactId>
+    <artifactId>lsc-resilient-inter-service-communication</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>discovery-server-start</module>
-        <module>discovery-server-end</module>
-        <module>eureka-clients-start</module>
-        <module>eureka-clients-end</module>
     </modules>
 </project>

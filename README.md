@@ -1,3 +1,3 @@
-# Learn Spring Cloud - Service Discovery and Registration
+# Learn Spring Cloud - Resilient Inter-Service Communication
 
-This is the codebase for Module "Service Discovery and Registration" of Learn Spring Cloud.
+This is the codebase for Module "Resilient Inter-Service Communication" of Learn Spring Cloud.
