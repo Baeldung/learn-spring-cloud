@@ -22,7 +22,7 @@ public class NotificationRestAPILiveTest {
     @Test
     public void givenNewNotification_whenSend_thenSuccess() {
         NotificationDto newNotification = new NotificationDto("sender@testemail.com",
-            "recipient@testemail.com", "Test Email", "This is a test email.");
+                "recipient@testemail.com", "Test Email", "This is a test email.");
         ResponseEntity<NotificationDto> response = restTemplate.postForEntity(BASE_URL + "/send", newNotification, NotificationDto.class);
 
         assertSame(HttpStatus.OK, response.getStatusCode());
