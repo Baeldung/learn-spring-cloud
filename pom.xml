@@ -16,5 +16,7 @@
         <module>discovery-server-end</module>
         <module>eureka-clients-start</module>
         <module>eureka-clients-end</module>
+        <module>load-balanced-start</module>
+        <module>load-balanced-end</module>
     </modules>
 </project>
