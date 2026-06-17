@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: task-service
+              uri: http://localhost:8080
+              predicates:
+                - Path=/campaigns/**
+                - Method=GET
+            - id: notification-service
+              uri: http://localhost:8081
+              predicates:
+                - Path=/notification/**

@@ -1,0 +1,79 @@
+{
+  "info": {
+    "name": "LSC",
+    "description": "Postman requests for the Learn Spring Cloud course.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Module 5 - API Gateways",
+      "description": "Requests demonstrated in the API Gateways module, routed through the Spring Cloud Gateway on port 8888.",
+      "item": [
+        {
+          "name": "Gateway Filters and Cross-Cutting Concerns",
+          "description": "Requests sent through the gateway to exercise the built-in and body-modification filters.",
+          "item": [
+            {
+              "name": "List Campaigns Through Gateway",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseURL}}/api/campaigns",
+                  "host": [
+                    "{{baseURL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "campaigns"
+                  ]
+                },
+                "description": "GET through the gateway: RewritePath strips the /api prefix so the backend receives /campaigns, AddRequestHeader stamps X-Source on the forwarded request, and ModifyResponseBody wraps the campaign list in a {\"source\":\"gateway\",\"data\":[...]} envelope."
+              },
+              "response": []
+            },
+            {
+              "name": "Send Notification Through Gateway",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"sender\":null,\"recipient\":\"user@baeldung.com\",\"subject\":\"Welcome\",\"content\":\"Hello\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseURL}}/notification/send",
+                  "host": [
+                    "{{baseURL}}"
+                  ],
+                  "path": [
+                    "notification",
+                    "send"
+                  ]
+                },
+                "description": "POST through the gateway with sender left null: the ModifyRequestBody filter rewrites the payload before it reaches the backend, so the echoed response shows sender set to \"gateway\"."
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": "http://localhost:8888"
+    }
+  ]
+}
