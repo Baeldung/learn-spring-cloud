@@ -16,5 +16,9 @@
         <module>resilient-communication-end</module>
         <module>circuit-breaker-start</module>
         <module>circuit-breaker-end</module>
+        <module>feign-cb-start</module>
+        <module>feign-cb-end</module>
+        <module>fallbacks-start</module>
+        <module>fallbacks-end</module>
     </modules>
 </project>

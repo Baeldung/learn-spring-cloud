@@ -41,7 +41,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{}",
+							"raw": "{\n    \"code\": \"{{$guid}}\",\n    \"name\": \"testName\",\n    \"description\": \"testDescription\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
