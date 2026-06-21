@@ -1,2 +1,32 @@
 server:
   port: 8888
+
+# The routes below now live in GatewayRoutesConfig (the Java DSL), not here. The task-service
+# and notification-service routes carry ModifyResponseBody/ModifyRequestBody body transforms,
+# and those transforms are Java lambdas that can't be expressed in YAML, so the routes had to
+# move to Java configuration. The block below is the equivalent built-in-filter configuration in
+# YAML, kept commented out for reference.
+#
+# To switch back to YAML-based routing, uncomment this block and disable the Java routes in
+# GatewayRoutesConfig (remove @Configuration, or the @Bean method). Note: the body transforms
+# still require the Java DSL (they have no YAML equivalent), so YAML routing alone won't apply
+# them.
+#
+#spring:
+#  cloud:
+#    gateway:
+#      server:
+#        webflux:
+#          routes:
+#            - id: task-service
+#              uri: http://localhost:8080
+#              predicates:
+#                - Path=/api/campaigns/**
+#                - Method=GET
+#              filters:
+#                - AddRequestHeader=X-Source, gateway
+#                - RewritePath=/api/(?<segment>.*), /${segment}
+#            - id: notification-service
+#              uri: http://localhost:8081
+#              predicates:
+#                - Path=/notification/**
