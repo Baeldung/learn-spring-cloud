@@ -9,6 +9,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>4.0.0</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.baeldung</groupId>
