@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.baeldung.lsc.web.dto.Notification;
 import com.baeldung.lsc.web.dto.NotificationRequest;
 
-@FeignClient(name = "notification-service", url = "http://localhost:8081", fallbackFactory = NotificationClientFallbackFactory.class)
+@FeignClient(name = "notification-service", url = "http://localhost:8081", 
+  fallbackFactory = NotificationClientFallbackFactory.class)
 public interface NotificationClient {
 
     @PostMapping("/notifications")

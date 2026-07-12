@@ -35,13 +35,6 @@ public class NotificationController {
         return notificationService.create(request.taskId(), request.message());
     }
 
-    @PostMapping("/slow")
-    @ResponseStatus(HttpStatus.OK)
-    public Notification createSlow(@RequestBody NotificationRequest request) throws InterruptedException {
-        Thread.sleep(5000);
-        return notificationService.create(request.taskId(), request.message());
-    }
-
     @GetMapping("/{id}")
     public Notification findById(@PathVariable Long id) {
         return notificationService.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
