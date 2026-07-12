@@ -21,4 +21,13 @@ public class GatewayRoutesConfig {
             .route("notification-service", r -> r.path("/notification/**").uri("http://localhost:8081"))
             .build();
     }
+
+    // Illustrative only: OR/NOT predicate composition, not part of the live route table.
+    //@Bean
+    public RouteLocator advancedPredicateRoutes(RouteLocatorBuilder builder) {
+        return builder.routes()
+            .route("task-service-legacy", r -> r.path("/campaigns/**").or().header("X-Legacy-Client", "true").uri("http://localhost:8080"))
+            .route("task-service-external", r -> r.header("X-Internal", "true").negate().and().path("/campaigns/**").uri("http://localhost:8080"))
+            .build();
+    }
 }
