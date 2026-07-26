@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.client.RestClient;
 
 import com.baeldung.lsc.web.dto.CampaignDto;
 
@@ -20,11 +20,14 @@ public class CampaignRestAPILiveTest {
     private static final String BASE_URL = "http://localhost:8080/campaigns";
     private static final Random random = new Random();
 
-    private RestTemplate restTemplate = new RestTemplate();
+    private RestClient restClient = RestClient.create();
 
     @Test
     public void givenCampaignExists_whenGet_thenSuccess() {
-        ResponseEntity<CampaignDto> response = restTemplate.getForEntity(BASE_URL + "/1", CampaignDto.class);
+        ResponseEntity<CampaignDto> response = restClient.get()
+                .uri(BASE_URL + "/1")
+                .retrieve()
+                .toEntity(CampaignDto.class);
 
         assertSame(response.getStatusCode(), HttpStatus.OK);
         assertNotNull(response.getBody());
@@ -37,7 +40,11 @@ public class CampaignRestAPILiveTest {
         String name = "Campaign " + index;
         String description = "Description of Campaign " + index;
         CampaignDto newCampaign = new CampaignDto(null, code, name, description);
-        ResponseEntity<CampaignDto> response = restTemplate.postForEntity(BASE_URL, newCampaign, CampaignDto.class);
+        ResponseEntity<CampaignDto> response = restClient.post()
+                .uri(BASE_URL)
+                .body(newCampaign)
+                .retrieve()
+                .toEntity(CampaignDto.class);
 
         assertSame(HttpStatus.CREATED, response.getStatusCode());
         assertNotNull(response.getBody());

@@ -1,7 +1,8 @@
 {
 	"info": {
 		"_postman_id": "54f1d577-3684-46fc-91ab-9a4e636d81d4",
-		"name": "Campaigns REST API",
+		"name": "Resilient Communication REST API",
+		"description": "notification-service must be started on port 8081 before task-service on port 8080 for the inter-service requests to succeed.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -41,7 +42,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{}",
+							"raw": "{\n    \"code\": \"{{$randomUUID}}\",\n    \"name\": \"Demo Campaign\",\n    \"description\": \"Campaign used for REST verification\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -102,6 +103,79 @@
 									"key": "name",
 									"value": "Campaign 2"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Review pull request\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/notifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"notifications"
 							]
 						}
 					},

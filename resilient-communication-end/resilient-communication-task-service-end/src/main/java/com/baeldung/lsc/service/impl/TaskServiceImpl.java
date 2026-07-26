@@ -35,7 +35,7 @@ public class TaskServiceImpl implements TaskService {
     public Task save(Task task) {
         Task savedTask = taskRepository.save(task);
         Notification notification = notificationClient
-                .sendNotification(new NotificationRequest(savedTask.getId(), "Task created: " + savedTask.getName()));
+          .sendNotification(new NotificationRequest(savedTask.getId(), "Task created: " + savedTask.getName()));
         LOG.info("Notification sent: {}", notification);
         return savedTask;
     }

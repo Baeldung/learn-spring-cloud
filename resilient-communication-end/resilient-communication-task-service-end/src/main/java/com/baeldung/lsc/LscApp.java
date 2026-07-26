@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 public class LscApp {
 
-    public static void main(final String... args) {
+    public static void main(String... args) {
         SpringApplication.run(LscApp.class, args);
     }
 
