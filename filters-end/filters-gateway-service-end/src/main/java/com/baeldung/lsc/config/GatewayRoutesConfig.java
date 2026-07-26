@@ -16,6 +16,7 @@ public class GatewayRoutesConfig {
         return builder.routes()
             .route("task-service", r -> r.path("/api/campaigns/**").and().method(HttpMethod.GET)
                 .filters(f -> f.addRequestHeader("X-Source", "gateway")
+                    .addResponseHeader("X-Response-Source", "gateway")
                     .rewritePath("/api/(?<segment>.*)", "/${segment}")
                     .modifyResponseBody(String.class, String.class,
                         (exchange, body) -> Mono.just("{\"source\":\"gateway\",\"data\":" + body + "}")))
