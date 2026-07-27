@@ -12,8 +12,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>resilient-communication-start</module>
-        <module>resilient-communication-end</module>
+        <module>declarative-clients-start</module>
+        <module>declarative-clients-end</module>
         <module>circuit-breaker-start</module>
         <module>circuit-breaker-end</module>
         <module>feign-cb-start</module>

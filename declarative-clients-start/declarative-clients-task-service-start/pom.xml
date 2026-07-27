@@ -2,14 +2,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>Learn Spring Cloud - Declarative REST Clients with Spring Cloud OpenFeign - Notification Service - Start</description>
-    <name>resilient-communication-notification-service-start</name>
+    <description>Learn Spring Cloud - Declarative REST Clients with Spring Cloud OpenFeign - Task Service - Start</description>
+    <name>declarative-clients-task-service-start</name>
 
-    <artifactId>resilient-communication-notification-service-start</artifactId>
+    <artifactId>declarative-clients-task-service-start</artifactId>
 
     <parent>
         <groupId>com.baeldung</groupId>
-        <artifactId>resilient-communication-start</artifactId>
+        <artifactId>declarative-clients-start</artifactId>
         <version>1.0.0</version>
         <relativePath>../</relativePath> 
     </parent>
@@ -36,7 +36,7 @@
         </dependency>
 
     </dependencies>
-
+    
     <properties>
 
     </properties>

@@ -3,13 +3,13 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <description>Learn Spring Cloud - Declarative REST Clients with Spring Cloud OpenFeign - Notification Service - End</description>
-    <name>resilient-communication-notification-service-end</name>
+    <name>declarative-clients-notification-service-end</name>
 
-    <artifactId>resilient-communication-notification-service-end</artifactId>
+    <artifactId>declarative-clients-notification-service-end</artifactId>
 
     <parent>
         <groupId>com.baeldung</groupId>
-        <artifactId>resilient-communication-end</artifactId>
+        <artifactId>declarative-clients-end</artifactId>
         <version>1.0.0</version>
         <relativePath>../</relativePath> 
     </parent>

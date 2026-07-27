@@ -2,8 +2,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>Learn Spring Cloud - Declarative REST Clients with Spring Cloud OpenFeign - End</description>
-    <name>resilient-communication-end</name>
+    <description>Learn Spring Cloud - Declarative REST Clients with Spring Cloud OpenFeign - Start</description>
+    <name>declarative-clients-start</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -12,13 +12,13 @@
     </parent>
 
     <groupId>com.baeldung</groupId>
-    <artifactId>resilient-communication-end</artifactId>
+    <artifactId>declarative-clients-start</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>resilient-communication-task-service-end</module>
-        <module>resilient-communication-notification-service-end</module>
+        <module>declarative-clients-task-service-start</module>
+        <module>declarative-clients-notification-service-start</module>
     </modules>
 
     <dependencyManagement>
