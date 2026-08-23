@@ -12,5 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>micrometer-tracing-start</module>
+        <module>micrometer-tracing-end</module>
     </modules>
 </project>
