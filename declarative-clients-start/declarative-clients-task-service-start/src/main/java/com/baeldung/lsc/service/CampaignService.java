@@ -5,6 +5,7 @@ import java.util.Optional;
 import com.baeldung.lsc.persistence.model.Campaign;
 
 public interface CampaignService {
+
     Optional<Campaign> findById(Long id);
 
     Campaign save(Campaign campaign);

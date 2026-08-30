@@ -25,9 +25,9 @@ public class CampaignRestAPILiveTest {
     @Test
     public void givenCampaignExists_whenGet_thenSuccess() {
         ResponseEntity<CampaignDto> response = restClient.get()
-                .uri(BASE_URL + "/1")
-                .retrieve()
-                .toEntity(CampaignDto.class);
+            .uri(BASE_URL + "/1")
+            .retrieve()
+            .toEntity(CampaignDto.class);
 
         assertSame(response.getStatusCode(), HttpStatus.OK);
         assertNotNull(response.getBody());
@@ -41,10 +41,10 @@ public class CampaignRestAPILiveTest {
         String description = "Description of Campaign " + index;
         CampaignDto newCampaign = new CampaignDto(null, code, name, description);
         ResponseEntity<CampaignDto> response = restClient.post()
-                .uri(BASE_URL)
-                .body(newCampaign)
-                .retrieve()
-                .toEntity(CampaignDto.class);
+            .uri(BASE_URL)
+            .body(newCampaign)
+            .retrieve()
+            .toEntity(CampaignDto.class);
 
         assertSame(HttpStatus.CREATED, response.getStatusCode());
         assertNotNull(response.getBody());

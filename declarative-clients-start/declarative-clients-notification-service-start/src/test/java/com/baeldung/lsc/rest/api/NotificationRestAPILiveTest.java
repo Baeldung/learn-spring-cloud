@@ -23,10 +23,10 @@ public class NotificationRestAPILiveTest {
     public void givenNewNotification_whenCreated_thenSuccess() {
         NotificationRequest request = new NotificationRequest(1L, "Task created: Test Task");
         ResponseEntity<Notification> response = restClient.post()
-                .uri(BASE_URL)
-                .body(request)
-                .retrieve()
-                .toEntity(Notification.class);
+            .uri(BASE_URL)
+            .body(request)
+            .retrieve()
+            .toEntity(Notification.class);
 
         assertSame(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());

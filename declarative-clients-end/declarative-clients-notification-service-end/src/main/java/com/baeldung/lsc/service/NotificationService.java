@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.baeldung.lsc.persistence.model.Notification;
 
 public interface NotificationService {
+
     Notification create(Long taskId, String message);
 
     Optional<Notification> findById(Long id);
