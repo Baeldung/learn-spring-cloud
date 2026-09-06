@@ -12,5 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>publishing-events-start</module>
+        <module>publishing-events-end</module>
     </modules>
 </project>
