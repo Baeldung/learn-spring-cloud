@@ -14,5 +14,7 @@
     <modules>
         <module>micrometer-tracing-start</module>
         <module>micrometer-tracing-end</module>
+        <module>log-correlation-start</module>
+        <module>log-correlation-end</module>
     </modules>
 </project>
